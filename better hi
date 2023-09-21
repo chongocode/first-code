@@ -1,0 +1,17 @@
+const char = document.getElementById('char')
+let pos = [Number(char.style.left.replace('px', '')), Number(char.style.top.replace('px', ''))]
+
+document.addEventListener('keydown', (e) => {
+    if(e.key === 'w') {
+        pos[1] -= 10
+    } else if(e.key === 's') {
+        pos[1] += 10
+    } else if(e.key === 'a'){
+        pos[0] -= 10
+    } else if(e.key === 'd'){
+        pos[0] += 10
+    } else if(e.key === 'se'){
+}
+    char.style.left = pos[0] + 'px'
+    char.style.top = pos[1] + 'px'
+})
